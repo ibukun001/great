@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title> Gallery </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link rel = 'stylesheet' href = 'css/main.css'>
+    </head>
+
+    <body>
+        <!-- page logo and header -->
+        <header>
+            <img  src = "images/gymlogo.jpg" id = "logo" class="rounded-circle"/> 
+            <a href= "index.html"><h1> BIG AND JACKED GYM</h1></a>
+            
+        </header>
+        <!-- Navigation bar -->
+        <nav>
+            <ul>
+            <li><a href= "index.html">HOME</a> </li>
+            <li><a href= "current_members.html">CURRENT MEMBERS</a> </li>
+            <li><a href= "event_calender.html">EVENTS</a></li>
+            <li><a href= "contact_us.html">CONTACT US</a> </li>
+            <li><a href= "img_gallery.html">IMAGES</a> </li>
+            <li><a href= "newsletterr.html">NEWS LETTER</a> </li>
+            <li><a href= "about_us.html">ABOUT US</a> </li>
+            <li><a href= "blog.html">BLOG</a> </li>
+            </ul>
+        </nav>
+    <main>
+
+        <!-- Threat Model for Images on Image Gallery page -->
+        <!-- Threat Source: External 
+        Threat Agent: Human or Malware 
+        Threat Intention: Malicious or Accidental 
+        Threat Motivation: Vandalism or Upload of inappropriate content
+        Threat Impact: Display of offensive or inappropriate content on the website, loss of user trust
+        Threat Mitigation: Regular monitoring and moderation of uploaded images, filtering software to detect inappropriate
+        content, user flagging/reporting system, regular backups of website data -->
+
+        <!-- event listeners to highlight and delight the images -->
+        <div class="gallery">
+            <img src ="images/download.jfif" id = "img1" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt = "Piana pose"/>
+            <img src ="images/anold schwarzenegger's pose.webp" id = "img2" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt = "anold schwarzenegger's pose">
+            <img src ="images/leg press.jfif" id = "img3" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt = "leg press">
+            <img src ="images/pull ups.jfif" id = "img4" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt = "pull ups">
+            <img src ="images/meal prep.webp" id = "img5" onmouseover="highlight(this)" onmouseout="delight(this)"class="gallery-img" alt = "meal prep for gym bros">
+            <img src ="images/creatine.jpg" id = "img6" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt = "creatine">
+            <img src ="images/gym members.jpg" id = "img7" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt = "gym unite">
+            <img src ="images/gym bro.jpg" id = "img8" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt = "gym bro">
+            <img src ="images/gym dumbell.jpg" id = "img9" onmouseover="highlight(this)" onmouseout="delight(this)" class="gallery-img" alt = "gym dumbell">
+        </div>
+      
+       
+    </main>
+    <style>
+        .container{
+            margin: 20px;
+            max-width: 800px;
+            padding: 0;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr) ;
+            grid-gap: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+    </style>
+    <!-- script passing functions for event listeners -->
+    <script>
+        function highlight(element){
+            document.getElementById(element.id).style = "border: solid green 2px";
+        }
+        function delight(element){
+            document.getElementById(element.id).style = "border: none"; 
+        }
+    </script>
+           
+    <aside> </aside>
+    <footer> 
+        <a href="mailto:bigandjackedgym.com">Copyright 2023 by Refsnes Data. All Rights Reserved.</a></p>
+    </footer>
+    </body>
+</html>

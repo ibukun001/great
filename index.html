@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title> Big and jacked gym society</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link rel = 'stylesheet' href = 'css/main.css'>
+    </head>
+
+    <body>
+            <!-- page logo and header -->
+        <header>
+            <img  src = "images/gymlogo.jpg" id = "logo" class="rounded-circle"/> 
+            <a href= "index.html"><h1> BIG AND JACKED GYM</h1></a>      
+
+            <!-- Threat Model for Login on Home Page -->
+            <!-- Threat Source: External 
+            Threat Agent: Human 
+            Threat Intention: Malicious
+            Threat Motivation: Stealing user credentials
+            Threat Impact: Unauthorized access to user accounts, theft of personal information 
+            Threat Mitigation: Strong password requirements, encrypted login data, captcha or other anti-bot
+            measures, regular password updates -->
+
+            <!-- login form --> 
+            <div id="Login">
+                <form>
+                  <label for="Login_Email">Email:</label>
+                  <input type="text" id="Login_Email" name="Login_Email" value="">
+                  <label for="Login_Password">Password:</label>
+                  <input type="password" id="Login_Password" name="Login_Password" value="">
+                  <button type="button" onclick="login()">Login</button>
+                </form>
+            </div>
+        </header>
+        <!-- Navigation bar --> 
+        <nav>
+            <ul>
+                <li><a href= "index.html">HOME</a> </li>
+                <li><a href= "current_members.html">CURRENT MEMBERS</a> </li>
+                <li><a href= "event_calender.html">EVENTS</a></li>
+                <li><a href= "contact_us.html">CONTACT US</a> </li>
+                <li><a href= "img_gallery.html">IMAGES</a> </li>
+                <li><a href= "newsletterr.html">NEWS LETTER</a> </li>
+                <li><a href= "about_us.html">ABOUT US</a> </li>
+                <li><a href= "blog.html">BLOG</a> </li>
+            </ul>
+        </nav>
+
+        <br>
+
+        <main> 
+            <div>
+                <div class="container">
+                    <div style="text-align:center">
+                <h1> Wellcome to Big and Jacked Gym!</h1>
+                <p> Your one-stop fitness haven. We offer top-notch equipment, tailored training programs and a supportive community to help you reach your goals. join us and unleash your full potential. lets get big, jacked and unstopable together!</p>
+                </div>
+            </div>
+            <!-- home page carousel -->
+            <div class="active">
+                <div id="home-carousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Wrapper -->
+                <div class="carousel-inner">
+                <!-- Item 1 -->
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/cbum-flex.jpg" alt = "cris bumstead">
+                </div>
+                <!-- Item 2 -->
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/anold schwarzenegger's pose.webp" alt = "arnold pose">
+            </div>
+ 
+                <!-- Item 3 -->
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/Ronnie-Coleman-Profile.jpg" alt = "king ronie coleman">
+            </div>
+
+
+        </main>
+         <!-- script for login alerts -->
+        <script>
+
+        function login() {
+            var email = document.getElementById("Login_Email").value;
+            var password = document.getElementById("Login_Password").value;
+  
+            if (email.trim() === "") {
+                alert("Please enter your email.");
+            } 
+            else if (password.trim() === "") {
+                alert("Please enter your password.");
+            }   
+            else { 
+                alert("You have been successfully logged in!");
+            }
+        }
+        </script> 
+        <!-- Articles about the website-->
+    <aside><article class="all-browsers">
+        <h1>Most Popular Browsers</h1>
+        <article class="browser">
+          <h2>New fitness class now available in our gym:</h2>
+          <p>Find your perfect workout routine and achive your fitness goals with these exciting offerings.</p>
+        </article>
+        <article class="browser">
+          <h2>Upgraded Equipment and Amenties:</h2>
+          <p>Our gyms latest additions to enhance your workout experience and help you reach your fitness milestones.</p>
+        </article>
+        <article class="browser">
+            
+          <h2>Special event and promotions at our gym:</h2>
+          <p>From group challenges to discount Memberships, Discover how to take advantages of these opportunities to elevate your fitnes journey.</p>
+        </article>
+    </article>
+    </aside>
+    <footer> 
+        <a href="mailto:bigandjackedgym.com">Copyright 2023 by Refsnes Data. All Rights Reserved.</a></p>
+    </footer>
+
+    </body>
+</html>
